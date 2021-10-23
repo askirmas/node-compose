@@ -1,11 +1,13 @@
 {
+  "preset": "ts-jest",
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "src/**/*.ts",
-    "!src/index.ts",
+    "**/*.{ts,tsx,js,jsx}",
+    "!**/*.d.ts",
     "!**/node_modules/**",
     "!**/coverage/**",
-    "!**/cypress/**"
+    "!**/cypress/**",
+    "!**/migrations/**"
   ],
   "coverageThreshold": {
     "global": {
@@ -15,11 +17,7 @@
       "lines": 100
     }
   },
-  "preset": "ts-jest",
   "testEnvironment": "node",
   "verbose": true,
-  "bail": 1,
-  "testPathIgnorePatterns": [
-    "/__e2e__/"
-  ]
+  "bail": 1
 }

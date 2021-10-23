@@ -4,10 +4,11 @@
   "description": "",
   "scripts": {
     "setup": "./setup.sh",
-    "dev": "npm run jest -- --coverage=false --testTimeout=9999999",
-    "test": "npm run jest -- verbose=false",
+    "dev": "npm run jest -- --watch --coverage=false --testTimeout=9999999",
+    "test": "npm run jest -- --verbose=false",
     "pretest": "jest --clearCache",
     "build": "exit 0",
+    "prebuild": "npm run test",
     "jest": "jest --runInBand"
   },
   "repository": {
